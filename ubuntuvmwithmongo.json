@@ -189,7 +189,7 @@
                     },
                     "fileUris": {
                         "value": [
-                            "https://ubuntuvmwithmongodb.blob.core.windows.net/script/script.sh?sp=r&se=2020-12-25T22:48:38Z&sv=2019-12-12&sr=b&sig=FgiLXQ4nw1h90qsL7JpRXRCkPJE70tlZhSptLw3QgLc%3D"
+                            "https://github.com/koenraadhaedens/ubuntuvmwithmongodb/blob/main/script.sh"
                         ]
                     },
                     "commandToExecute": {

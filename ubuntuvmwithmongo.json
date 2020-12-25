@@ -3,16 +3,47 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
         "location": {
-            "type": "string"
+            "type": "string",
+			"defaultValue": "eastus"
         },
         "networkInterfaceName": {
-            "type": "string"
+            "type": "string",
+			"defaultValue": "mongodbserver475"
         },
         "networkSecurityGroupName": {
-            "type": "string"
+            "type": "string",
+			"defaultValue": "mongodbserver-nsg"
         },
         "networkSecurityGroupRules": {
-            "type": "array"
+            "type": "array",
+			"defaultValue":  [
+        {
+          "name": "SSH",
+          "properties": {
+            "priority": 300,
+            "protocol": "TCP",
+            "access": "Allow",
+            "direction": "Inbound",
+            "sourceAddressPrefix": "*",
+            "sourcePortRange": "*",
+            "destinationAddressPrefix": "*",
+            "destinationPortRange": "22"
+          }
+        },
+        {
+          "name": "MONGO",
+          "properties": {
+            "priority": 301,
+            "protocol": "ANY",
+            "access": "Allow",
+            "direction": "Inbound",
+            "sourceAddressPrefix": "*",
+            "sourcePortRange": "*",
+            "destinationAddressPrefix": "*",
+            "destinationPortRange": "27017"
+          }
+        }
+      ]
         },
         "subnetName": {
             "type": "string"
